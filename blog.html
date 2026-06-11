@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <title>가양 클럽 비교 - 브로들의 리얼 후기</title>
+    <meta name="description" content="가양동 클럽 완전 비교! 브로들이 직접 경험한 가양 클럽의 분위기, 음악, 가격, 꿀팁까지. 010-6279-0862 문의 환영. 진짜 리뷰로 보는 가양 클럽 랭킹.">
+    <meta name="keywords" content="가양 클럽, 가양 클럽 비교, 가양동 클럽, 가양 클럽 추천, 가양 클럽 리뷰, 가양 클럽 후기, 가양 클럽 분위기, 가양 클럽 가격">
+    <link rel="canonical" href="https://t3b07-gy-club-cmp-1.vercel.app/">
+    <meta property="og:title" content="가양 클럽 비교 - 브로들의 리얼 후기">
+    <meta property="og:description" content="가양동 클럽 완전 비교! 브로들이 직접 경험한 가양 클럽의 분위기, 음악, 가격, 꿀팁까지. 010-6279-0862 문의 환영. 진짜 리뷰로 보는 가양 클럽 랭킹.">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1d1d1f;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #86868b;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: #1d1d1f;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 99;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        .blog-hero {
+            padding: 80px 0 48px;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .blog-hero p {
+            font-size: 1.1rem;
+            color: #86868b;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .blog-article {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .blog-article h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .blog-article h2:first-child {
+            margin-top: 0;
+        }
+
+        .blog-article h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 28px 0 12px;
+        }
+
+        .blog-article p {
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 16px 0 24px;
+            padding-left: 24px;
+        }
+
+        .blog-article li {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .blog-article .highlight-box {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .blog-article .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-article strong {
+            font-weight: 600;
+        }
+
+        .blog-article .cta-section {
+            background: #1d1d1f;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0 0;
+        }
+
+        .blog-article .cta-section h3 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        .blog-article .cta-section p {
+            color: #a1a1a6;
+            margin-bottom: 20px;
+        }
+
+        .blog-article .cta-section a {
+            display: inline-block;
+            background: #ffffff;
+            color: #1d1d1f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .blog-article .cta-section a:hover {
+            background: #e8e8ed;
+            transform: translateY(-2px);
+        }
+
+        .tel-link {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .tel-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1d1d1f;
+            color: #86868b;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 24px;
+            }
+
+            .blog-article h2 {
+                font-size: 1.5rem;
+            }
+
+            .blog-article .cta-section {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">가양클럽비교</a>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/blog">블로그</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="tel:01062790862">문의</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/" onclick="toggleMenu()">홈</a>
+            <a href="/blog" onclick="toggleMenu()">블로그</a>
+            <a href="/about" onclick="toggleMenu()">소개</a>
+            <a href="tel:01062790862" onclick="toggleMenu()">문의</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="blog-hero">
+            <h1>가양 클럽 비교 블로그</h1>
+            <p>브로들이 직접 발로 뛰고 경험한 가양동 클럽들의 진짜 이야기. 분위기, 음악, 가격까지 싹 다 비교해드립니다.</p>
+        </section>
+
+        <article class="blog-article">
+            <h2>가양 클럽 비교: 브로가 알려주는 진짜 리얼 후기</h2>
+            <p>야, 브로들아! 요즘 가양동 클럽 어디 가야 될지 고민된다며? 맞아, 나도 처음엔 완전 헤맸어. "가양 클럽 비교" 검색해도 광고만 잔뜩이고, 진짜 후기는 찾기 힘들잖아? 그래서 내가 직접 경험한 내용을 바탕으로 솔직하게 정리해봤어. 이 글 하나면 너도 오늘 밤 클럽에서 완전 즐길 수 있을 거야. 010-6279-0862로 전화 주면 더 자세히 알려줄게!</p>
+
+            <div class="highlight-box">
+                <p><strong>✔️ 이 글에서 알 수 있는 것:</strong></p>
+                <ul>
+                    <li>가양동 클럽 TOP 3 분위기 비교</li>
+                    <li>음악 장르와 스피커 퀄리티 차이</li>
+                    <li>입장료, 음료 가격 실전 꿀팁</li>
+                    <li>브로가 추천하는 최적의 코스</li>
+                </ul>
+            </div>
+
+            <h2>1. 가양 클럽 A: 힙하고 감성적인 공간</h2>
+            <p>처음 가본 클럽인데, 인테리어가 진짜 미쳤어. 조명이 은은하고 소파도 푹신해서 대화하기 좋더라고. 음악은 딥하우스 위주로 틀어주는데, 감성에 취해서 춤추기 좋아. 입장료는 2만 원 정도였고, 맥주 한 잔에 7천 원. 주말엔 사람이 좀 많으니까 일찍 가는 걸 추천해.</p>
+            <p>근데 브로, 여기서 중요한 게 하나 있어. 웨이팅이 길 수 있으니까 네이버 예약 미리 해두는 게 좋아. 나도 처음에 예약 안 하고 갔다가 30분 기다렸거든. 쩝.</p>
+
+            <h2>2. 가양 클럽 B: EDM 성지, 에너지 폭발</h2>
+            <p>에너지 넘치는 음악을 원한다면 여기야! EDM과 일렉트로닉 비트가 밤새도록 울려 퍼져. 스피커가 진짜 크고 베이스가 꽉 차서 몸이 자동으로 움직여져. 입장료는 1만 5천 원으로 저렴한 편이고, 칵테일이 8천 원 정도. 단, 음악이 너무 크니까 귀마개 챙겨 가는 것도 팁이야.</p>
+            <p>내 친구는 여기서 첫눈에 반했다는 썰도 있더라. 분위기 자체가 자유분방하고 신나니까 인연 만들기도 좋을지도? ㅋㅋ</p>
+
+            <h2>3. 가양 클럽 C: 가성비 최고, 가족 같은 분위기</h2>
+            <p>가격 부담 없이 가볍게 즐기고 싶다면 여기 강추. 입장료가 1만 원이고, 생맥주는 5천 원이야. 음악은 팝과 힙합을 섞어서 틀어줘서 다 같이 즐기기 좋아. 사장님이 직접 손님들에게 인사하고 다니는 게 인상적이었어. 아늑하고 편한 느낌?</p>
+            <p>단점은 규모가 좀 작아서 주말엔 북적일 수 있다는 거. 그래도 오히려 그래서 더 끈끈한 분위기가 나는 것 같아. 나도 여기서 단체로 와서 놀다가 새로운 인연 많이 만들었거든.</p>
+
+            <h2>가격 비교 한눈에 보기</h2>
+            <ul>
+                <li><strong>클럽 A:</strong> 입장료 2만 원, 맥주 7천 원, 분위기 ★★★★★</li>
+                <li><strong>클럽 B:</strong> 입장료 1.5만 원, 칵테일 8천 원, 음악 ★★★★★</li>
+                <li><strong>클럽 C:</strong> 입장료 1만 원, 생맥주 5천 원, 가성비 ★★★★★</li>
+            </ul>
+            <p>야, 가격만 보면 클럽 C가 제일 좋아 보이지? 근데 분위기나 음악 취향에 따라 다르니까 본인이 원하는 걸 먼저 정해. 나는 개인적으로 클럽 A의 감성을 좋아해서 자주 가는 편이야.</p>
+
+            <h2>브로의 꿀팁 대방출</h2>
+            <p>이제 내가 진짜 꿀팁을 알려줄게. 첫째, 가양 클럽은 대부분 10시 이후에 본격적으로 붐비니까 9시쯤 도착해서 여유롭게 시작해. 둘째, 사전 예약하면 입장료 할인해주는 곳도 있으니까 꼭 확인해. 셋째, 주차는 근처 공영주차장 이용하는 게 저렴해. 클럽마다 협력 주차장이 있을 수 있으니 전화로 물어보고 가.</p>
+            <p>넷째, 술값 아끼고 싶다면 첫 잔은 클럽에서 시키고, 이후에는 근처 편의점에서 사서 마셔. 근데 이건 좀 눈치 보일 수 있으니까 알아서 판단해 ㅋㅋ. 마지막으로, 택시 잡기 힘드니까 귀가 시에는 대리운전이나 지하철 막차 시간 꼭 체크해.</p>
+
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <h3>Q: 가양 클럽 중에 가장 조용한 곳은?</h3>
+            <p>A: 클럽 A가 대화하기 좋은 정도로 조용한 편이야. 클럽 B는 시끄럽고, C는 중간 정도.</p>
+
+            <h3>Q: 여성 할인 같은 건 있나?</h3>
+            <p>A: 가끔 이벤트로 여성 무료 입장하는 날도 있는데, 보통은 없어. 각 클럽 인스타그램 확인해봐.</p>
+
+            <h3>Q: 처음 가는 사람한테 추천할 만한 곳은?</h3>
+            <p>A: 나는 클럽 C를 추천해. 가격도 부담 없고 분위기가 편해서 처음에도 좋아. 친구들이랑 같이 가면 더 재밌어.</p>
+
+            <div class="cta-section">
+                <h3>더 궁금한 게 있으면 언제든 전화해!</h
+</body>
+</html>

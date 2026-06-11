@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <title>가양 클럽 정보 - 브로들의 리얼 가이드</title>
+    <meta name="description" content="가양 클럽 방문 전 꼭 알아야 할 정보 총정리! 위치, 운영시간, 드레스코드, 입장료까지. 브로들이 알려주는 가양동 클럽 완벽 가이드. 010-6279-0862 문의 환영.">
+    <meta name="keywords" content="가양 클럽 정보, 가양동 클럽 정보, 가양 클럽 위치, 가양 클럽 운영시간, 가양 클럽 드레스코드, 가양 클럽 입장료, 가양 클럽 주차, 가양 클럽 예약">
+    <link rel="canonical" href="https://t3b07-gy-club-cmp-1.vercel.app/info">
+    <meta property="og:title" content="가양 클럽 정보 - 브로들이 알려주는 모든 것">
+    <meta property="og:description" content="가양 클럽 방문 전 꼭 알아야 할 핵심 정보들! 위치부터 꿀팁까지 싹 다 모았다.">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* 헤더 & 네비게이션 */
+        header {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #1d1d1f;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #86868b;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+            letter-spacing: -0.01em;
+        }
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1d1d1f;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            z-index: 999;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 0;
+            color: #1d1d1f;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .container {
+                padding: 0 16px;
+            }
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #1d1d1f;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 980px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .tel-link:hover {
+            background: #000;
+            transform: scale(1.02);
+        }
+        /* 히어로 */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #86868b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+        /* 섹션 */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        /* 카드 그리드 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #515154;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        /* 리스트 스타일 */
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+        .info-value {
+            color: #515154;
+            text-align: right;
+        }
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        }
+        .faq-item h4 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .faq-item p {
+            color: #515154;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        /* 푸터 */
+        footer {
+            background: #1d1d1f;
+            color: #86868b;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">브로클럽<span>.kr</span></a>
+            <ul class="nav-links">
+                <li><a href="/">비교</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/review">리뷰</a></li>
+                <li><a href="/tip">꿀팁</a></li>
+                <li><a href="tel:010-6279-0862" class="tel-link">📞 문의</a></li>
+            </ul>
+            <button class="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="mobile-menu">
+            <a href="/">비교</a>
+            <a href="/info">정보</a>
+            <a href="/review">리뷰</a>
+            <a href="/tip">꿀팁</a>
+            <a href="tel:010-6279-0862">📞 문의하기</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>가양 클럽<br>완벽 정보 가이드</h1>
+                <p>브로들이 직접 발로 뛰고 전화 돌려서 모은 가양동 클럽의 모든 정보. 입장료부터 주차까지 싹 다 공개한다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📍 기본 정보 한눈에</h2>
+                <div class="card">
+                    <ul class="info-list">
+                        <li>
+                            <span class="info-label">📍 위치</span>
+                            <span class="info-value">서울 강서구 가양동 148-12 (가양역 3번 출구 도보 5분)</span>
+                        </li>
+                        <li>
+                            <span class="info-label">🕐 운영 시간</span>
+                            <span class="info-value">매일 20:00 ~ 익일 05:00 (주말 06:00)</span>
+                        </li>
+                        <li>
+                            <span class="info-label">💵 입장료</span>
+                            <span class="info-value">평일 10,000원 / 주말 15,000원 (여성 할인 있음)</span>
+                        </li>
+                        <li>
+                            <span class="info-label">🚗 주차</span>
+                            <span class="info-value">전용 주차장 30대 가능 (발렛 5,000원)</span>
+                        </li>
+                        <li>
+                            <span class="info-label">👔 드레스코드</span>
+                            <span class="info-value">캐주얼 OK (운동화 가능, 슬리퍼 금지)</span>
+                        </li>
+                        <li>
+                            <span class="info-label">📞 예약 문의</span>
+                            <span class="info-value">010-6279-0862 (24시간 예약 가능)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🏠 가양 클럽 시설 정보</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🎵 메인 홀</h3>
+                        <p>250평 규모의 메인 홀. 최신 사운드 시스템과 LED 월이 인상적이야. 브로들끼리 와서 신나게 놀기 딱 좋아. EDM, 힙합, 레트로까지 장르가 다양하게 나와서 지루할 틈이 없음.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🍸 VIP 라운지</h3>
+                        <p>단체로 오면 VIP 룸 추천! 10인 이상 예약하면 무료 업그레이드도 가능하다고 해. 소파도 푹신하고 바텐더가 직접 만들어주는 칵테일이 꽤 괜찮아. 전화해서 물어보면 자세히 알려줌.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🪩 루프탑 테라스</h3>
+                        <p>날씨 좋은 날에는 루프탑에서 한잔하는 게 최고야. 가양동 야경이 은은하게 보이고 공기도 좋아. 담배 피우는 브로들한테는 더할 나위 없는 공간. 다만 자리가 많지 않으니 일찍 가는 걸 추천.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🎧 음악 & 분위기</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🎶 장르</h3>
+                        <p>하우스, EDM, 힙합, 레트로 팝까지 골고루 틀어줘. 요즘은 2000년대 초반 노래도 종종 나와서 분위기 미쳤다. 브로들이 좋아하는 노래 나오면 다 같이 떼창하는 게 이 동네 클럽 문화야.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💃 분위기</h3>
+                        <p>처음 가면 약간 긴장될 수 있는데, 걱정 마. 가양 클럽은 사람들이 다 친절해. 혼자 와도 금방 친해질 수 있고, 직원들도 분위기 메이킹을 잘해줘서 금방 적응할 수 있어.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">❓ 자주 묻는 질문</h2>
+                <div class="faq-item">
+                    <h4>처음 가는데 무서울까요?</h4>
+                    <p>전혀! 오히려 가양 클럽은 입문자한테 딱이야. 사람들도 다 친절하고, 혼자 와도 직원들이 잘 챙겨줘. 나도 첫 방문 때 긴장했는데 30분 만에 적응했어.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>여성 할인 있나요?</h4>
+                    <p>응, 평일에는 여성 입장료가 5,000원이고, 목요일은 '레이디스 나이트'로 여성 무료 입장 이벤트도 해. 자세한 건 전화해서 물어보는 게 확실해.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>주차는 어디에 하나요?</h4>
+                    <p>클럽 바로 앞에 전용 주차장이 있어. 30대 정도 주차 가능하고, 자리가 없으면 발렛 서비스(5,000원)를 이용하면 돼. 대중교통 이용 시 가양역 3번 출구에서 걸어오면 5분.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>예약 꼭 해야 하나요?</h4>
+                    <p>주말이나 공휴일에는 예약하는 게 좋아. 입장 대기 줄이 길어질 수 있거든. 전화(010-6279-0862)로 미리 예약하면 입장도 빠르고 좋은 자리로 안내해줘.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>드레스코드 깐깐한가요?</h4>
+                    <p>생각보다 자유로워. 깔끔한 청바지
+</body>
+</html>

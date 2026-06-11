@@ -1,214 +1,536 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <title>가양 클럽 비교 - 가양동 최고 클럽 추천 & 리뷰 | 브로들의 리얼 후기</title>
+    <meta name="description" content="가양동 클럽 완전 비교! 브로들이 직접 경험한 가양 클럽의 분위기, 음악, 가격, 꿀팁까지. 010-6279-0862 문의 환영. 진짜 리뷰로 보는 가양 클럽 랭킹.">
+    <meta name="keywords" content="가양 클럽, 가양 클럽 비교, 가양동 클럽, 가양 클럽 추천, 가양 클럽 리뷰, 가양 클럽 후기, 가양 클럽 분위기, 가양 클럽 가격">
+    <link rel="canonical" href="https://t3b07-gy-club-cmp-1.vercel.app/">
+    <meta property="og:title" content="가양 클럽 비교 - 브로들의 리얼 후기">
+    <meta property="og:description" content="가양동 클럽 완전 비교! 브로들이 직접 경험한 가양 클럽의 분위기, 음악, 가격, 꿀팁까지. 진짜 리뷰로 보는 가양 클럽 랭킹.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b07-gy-club-cmp-1.vercel.app/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23111111'/%3E%3Ctext x='600' y='315' text-anchor='middle' fill='%23ffffff' font-size='48' font-family='sans-serif' font-weight='bold'%3E가양 클럽 비교%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="가양 클럽 비교 - 브로들의 리얼 후기">
+    <meta name="twitter:description" content="가양동 클럽 완전 비교! 브로들이 직접 경험한 가양 클럽의 분위기, 음악, 가격, 꿀팁까지.">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23111111'/%3E%3Ctext x='600' y='315' text-anchor='middle' fill='%23ffffff' font-size='48' font-family='sans-serif' font-weight='bold'%3E가양 클럽 비교%3C/text%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "가양 클럽 비교",
+        "description": "가양동 클럽 비교 및 리뷰 정보 제공",
+        "url": "https://t3b07-gy-club-cmp-1.vercel.app/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressRegion": "강서구",
+            "addressCountry": "KR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "bestRating": "5",
+            "ratingCount": "24"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        
+        /* 헤더 & 네비게이션 */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid #111111;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #111111;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #111111;
+            text-decoration: none;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .nav-links a:hover { border-bottom-color: #2563eb; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #111111;
+            transition: 0.2s;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #111111;
+            padding: 16px 24px;
+        }
+        .mobile-menu.active { display: block; }
+        .mobile-menu a {
+            display: block;
+            padding: 8px 0;
+            color: #111111;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #eee;
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+
+        /* 히어로 */
+        .hero {
+            padding: 64px 24px 48px;
+            text-align: center;
+            border-bottom: 1px solid #111111;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .hero-visual {
+            width: 100%;
+            max-width: 600px;
+            height: 240px;
+            margin: 24px auto;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #111111;
+            color: #ffffff;
+            padding: 12px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border: 1px solid #111111;
+            transition: all 0.2s;
+        }
+        .hero-cta:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* 섹션 */
+        section { padding: 40px 0; border-bottom: 1px solid #eee; }
+        section:last-of-type { border-bottom: 1px solid #111111; }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #111111;
+            display: inline-block;
+        }
+
+        /* 카드 그리드 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .card {
+            border: 1px solid #111111;
+            padding: 24px;
+            transition: all 0.2s;
+        }
+        .card:hover { border-color: #2563eb; }
+        .card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .card p { font-size: 0.875rem; color: #555; line-height: 1.6; }
+
+        /* UGC 리뷰 */
+        .review-card {
+            border: 1px solid #111111;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-nick {
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+        .review-date {
+            font-size: 0.75rem;
+            color: #888;
+        }
+        .review-stars {
+            color: #111111;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 0.875rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 비교 테이블 */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .compare-item {
+            border: 1px solid #111111;
+            padding: 24px;
+        }
+        .compare-item h4 { font-weight: 600; margin-bottom: 8px; font-size: 1rem; }
+        .compare-item ul { list-style: none; }
+        .compare-item li {
+            font-size: 0.875rem;
+            padding: 4px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .compare-item li:last-child { border-bottom: none; }
+
+        /* 푸터 */
+        footer {
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: #888;
+            border-top: 1px solid #111111;
+        }
+        footer a { color: #111111; text-decoration: underline; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero p { font-size: 1rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .compare-grid { grid-template-columns: 1fr; }
+            .hero-visual { height: 180px; font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <nav>
+            <a href="/" class="logo">가양클럽비교</a>
+            <ul class="nav-links">
+                <li><a href="#clubs">클럽</a></li>
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#compare">비교</a></li>
+                <li><a href="tel:010-6279-0862">문의</a></li>
+            </ul>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-menu">
+                <a href="#clubs" onclick="document.querySelector('.mobile-menu').classList.remove('active')">클럽</a>
+                <a href="#reviews" onclick="document.querySelector('.mobile-menu').classList.remove('active')">리뷰</a>
+                <a href="#compare" onclick="document.querySelector('.mobile-menu').classList.remove('active')">비교</a>
+                <a href="tel:010-6279-0862" onclick="document.querySelector('.mobile-menu').classList.remove('active')">문의</a>
+            </div>
+        </nav>
     </header>
+
     <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
+        <section class="hero">
+            <div class="container">
+                <h1>가양 클럽, 진짜 비교해봤어</h1>
+                <p>브로들이 직접 밤샘 취재한 가양동 클럽들의 리얼한 분위기, 음악, 가격. 주말에 어디 갈지 고민된다면? 여기 다 정리했어.</p>
+                <div class="hero-visual">🎵 가양 클럽</div>
+                <a href="tel:010-6279-0862" class="hero-cta">☎ 클럽 문의하기</a>
+            </div>
+        </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
+        <section id="clubs">
+            <div class="container">
+                <h2 class="section-title">인기 클럽 한눈에</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🎧 클럽 M</h3>
+                        <p>힙합 & EDM 믹스셋. 입장료 2만원. 금토는 북적북적. 브로들 사이에서 핫한 곳.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎸 클럽 S</h3>
+                        <p>라이브 밴드 + 디제잉. 30대 이상 분위기. 칵테일 가격 착함. 데이트로 굿.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💃 클럽 L</h3>
+                        <p>대형 클럽. 3층 규모. 유명 DJ 초청 많음. 입장 줄 필수. 가양 랜드마크.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
+        <section id="reviews">
+            <div class="container">
+                <h2 class="section-title">브로들이 직접 쓴 리얼 후기</h2>
+                <div class="card-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nick">🔥 불타는형</span>
+                            <span class="review-date">2024.03.15</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">클럽 M 진짜 미쳤다. 음악 좋고 분위기 끝내줌. 근데 금요일엔 사람 너무 많아서 조심. 입장 줄 30분 기다림.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nick">🍺 맥주마니아</span>
+                            <span class="review-date">2024.03.10</span>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">클럽 S는 30대 이상한테 딱이야. 조용히 술 마시면서 음악 듣기 좋음. 칵테일 8천원? 가성비 짱.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nick">🕺 댄스왕</span>
+                            <span class="review-date">2024.03.05</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">클럽 L은 규모가 장난 아님. 3층 다 돌아보려면 1시간 걸림. 유명 DJ 올 때는 꼭 가. 근데 입장료 3만원인 건 함정.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nick">🌙 야간비행</span>
+                            <span class="review-date">2024.02.28</span>
+                        </div>
+                        <div class="review-stars">★★★☆☆</div>
+                        <p class="review-text">클럽 M 갔다가 클럽 S로 이동. M은 사람 많아서 숨 막힘. S는 한적해서 좋았어. 취향 따라 선택하길.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-nick">🎤 노래방대장</span>
+                            <span class="review-date">2024.02.20</span>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">가양 클럽 중에 L이 제일 무난. 처음 가는 브로들은 L부터 시작해. 주차는 근처 공영주차장 이용.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-        </div>
-      </div>
+        <section id="compare">
+            <div class="container">
+                <h2 class="section-title">클럽별 핵심 비교</h2>
+                <div class="compare-grid">
+                    <div class="compare-item">
+                        <h4>🎧 클럽 M</h4>
+                        <ul>
+                            <li>장르: 힙합/EDM</li>
+                            <li>입장료: 2만원</li>
+                            <li>분위기: 🔥🔥🔥🔥🔥</li>
+                            <li>추천: 20대 초중반</li>
+                        </ul>
+                    </div>
+                    <div class="compare-item">
+                        <h4>🎸 클럽 S</h4>
+                        <ul>
+                            <li>장르: 라이브/재즈</li>
+                            <li>입장료: 1.5만원</li>
+                            <li>분위기: 🍸🍸🍸🍸</li>
+                            <li>추천: 30대 이상</li>
+                        </ul>
+                    </div>
+                    <div class="compare-item">
+                        <h4>💃 클럽 L</h4>
+                        <ul>
+                            <li>장르: EDM/팝</li>
+                            <li>입장료: 3만원</li>
+                            <li>분위기: 🎉🎉🎉🎉🎉</li>
+                            <li>추천: 첫 방문객</li>
+                        </ul>
+                    </div>
+                    <div class="compare-item">
+                        <h4>📌 브로 꿀팁</h4>
+                        <ul>
+                            <li>M: 금토 피크타임 피할 것</li>
+                            <li>S: 데이트 코스 추천</li>
+                            <li>L: 일찍 가서 줄 서기</li>
+                            <li>공통: 신분증 필수!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 포스트 DNA 4023f91e 제목: 창작한 제목: "권리금 2억 받고 나간 가게의 실거래 내역서를 중심으로: 룸 단위 서비스업에서 원가 분석의 어두운 과정" ### 포스트 메타정보포스트 기획 테마: 가양 클럽 비교 현장에서 놓치기 쉬운 포인트를 기록해봤다 백링크</p>
       </div>
-    </footer>
+      <a href="posts/field_note-002-x1zc5l.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">가양 클럽 비교 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목"슬라이드 번호 7의 미스터리: 스노 Snowden과 MK울트라의 음모론적 해석" ## 포스트 DNA 1bd07a49관점: 실패 사례를 복기해 재발 방지 원칙을 도출구조: comparative-journey — 동일 목표를 두 경로로 시도한 비</p>
+      </div>
+      <a href="posts/review-001-x1zc5l.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div class="container">
+            <p>© 2024 가양 클럽 비교 · <a href="tel:010-6279-0862">010-6279-0862</a></p>
+            <p style="margin-top: 8px;">가양동 클럽 정보는 주기적으로 업데이트됩니다. 방문 전 전화 문의 추천!</p>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const menu = document.querySelector('.mobile-menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
